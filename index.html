@@ -18,6 +18,25 @@
       padding: 20px;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: #00ffc8;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #00bfff;
+      color: #fff;
+    }
+
     header {
       text-align: center;
       margin-bottom: 40px;
@@ -31,6 +50,11 @@
       object-fit: cover;
       box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
       margin-bottom: 15px;
+      transition: transform 0.4s;
+    }
+    .avatar img:hover {
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 0 30px #00ffc8;
     }
 
     h1 {
@@ -59,6 +83,11 @@
       padding: 25px;
       margin-bottom: 25px;
       box-shadow: 0 0 10px rgba(0,255,255,0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    section:hover {
+      box-shadow: 0 0 30px #00ffc8;
+      transform: translateY(-3px) scale(1.01);
     }
 
     section h2 {
@@ -78,6 +107,21 @@
       content: "🌟 ";
     }
 
+    .contact-icons {
+      display: flex;
+      gap: 18px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    .contact-icons a {
+      font-size: 1.7em;
+      color: #00ffc8;
+      transition: color 0.3s;
+    }
+    .contact-icons a:hover {
+      color: #00bfff;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9em;
@@ -89,10 +133,23 @@
       h1 {
         font-size: 2em;
       }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
+  <!-- Thêm Font Awesome cho icon mạng xã hội -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+  <nav>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#kynang">Kỹ năng</a>
+    <a href="#duan">Dự án</a>
+    <a href="#hocvan">Học vấn</a>
+    <a href="#lienhe">Liên hệ</a>
+  </nav>
   <header>
     <div class="avatar">
       <img src="avatar.jpg" alt="Ảnh đại diện Trần Hồng Thanh">
@@ -103,12 +160,12 @@
   </header>
 
   <main>
-    <section>
+    <section id="gioithieu">
       <h2>Giới thiệu</h2>
       <p>Xin chào! Mình là Thanh, đam mê công nghệ, lập trình và các dự án IoT. Đây là trang giới thiệu các dự án cá nhân và kỹ năng của mình.</p>
     </section>
 
-    <section>
+    <section id="kynang">
       <h2>Kỹ năng</h2>
       <ul>
         <li>Lập trình Arduino, ESP8266, ESP32</li>
@@ -118,13 +175,31 @@
       </ul>
     </section>
 
-    <section>
+    <section id="duan">
       <h2>Dự án tiêu biểu</h2>
       <ul>
         <li><a href="https://github.com/Thanh2302/code-esp8266.git" target="_blank">ESP8266 Webserver + DHT11</a></li>
         <li><a href="https://github.com/Thanh2302/code_arduino.git" target="_blank">LED Cube 8x8x8</a></li>
-        <li><a href="https://github.com/Thanh2302/iot-learning" target="_blank">Web học tiếng Anh với ESP32</a></li>
+        <li><a href="https://github.com/Thanh2302/iot-learning.git" target="_blank">Web học tiếng Anh với ESP32</a></li>
       </ul>
+    </section>
+
+    <section id="hocvan">
+      <h2>Học vấn</h2>
+      <ul>
+        <li>2022 - nay: Đại học Giao thông Vận tải TP.HCM, chuyên ngành kĩ thuật điều khiển & tự động hóa</li>
+        <li>2019 - 2022: THPT Nguyễn Hữu Huân, Thủ Đức</li>
+      </ul>
+    </section>
+
+    <section id="lienhe">
+      <h2>Liên hệ</h2>
+      <div class="contact-icons">
+        <a href="https://www.facebook.com/share/16eURaHw16/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://zalo.me/0353791635" target="_blank" title="Zalo"><i class="fa-solid fa-comment"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:thanhth6820@ut.edu.vn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
     </section>
   </main>
 
